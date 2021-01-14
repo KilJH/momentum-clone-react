@@ -51,6 +51,8 @@ function getWeatherIcon(desc) {
 			return <WbCloudyIcon />;
 		case '튼구름':
 			return <WbCloudyIcon />;
+		case '약간의 구름이 낀 하늘':
+			return <WbCloudyIcon />;
 		case '가벼운 눈':
 			return <AcUnitIcon />;
 		default:

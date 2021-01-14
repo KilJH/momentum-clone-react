@@ -15,8 +15,12 @@ const useStyles = makeStyles((theme) => ({
 function getTime(is24) {
 	const date = new Date();
 	const minutes = date.getMinutes();
-	const hours = is24 ? date.getHours() : date.getHours() - 12; // 24시간 표기인지 확인 후 저장
+	let hours = date.getHours();
 	const seconds = date.getSeconds();
+
+	if (!is24) {
+		hours = hours > 12 ? hours - 12 : hours;
+	}
 
 	return `${hours < 10 ? `0${hours}` : hours}:${
 		minutes < 10 ? `0${minutes}` : minutes

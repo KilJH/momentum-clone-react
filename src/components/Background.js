@@ -5,12 +5,12 @@ const IMG_NUMBER = 7;
 
 const useStyles = makeStyles(() => ({
 	root: {
-		background: `url(/img/${genRandom()}.jpg)`,
+		// background: `url(/img/${genRandom()}.jpg)`,
+		background: `url(https://source.unsplash.com/random)`,
 		position: 'fixed',
 		top: '0',
 		left: 0,
 		zIndex: -1,
-		animation: 'fadeIn 1s ease 0s',
 		objectFit: 'cover',
 		backgroundSize: 'cover',
 		width: '100%',
@@ -30,7 +30,7 @@ const Background = () => {
 	// classes.root.background = `url(/img/${genRandom()}.jpg)`;
 
 	return (
-		<Fade in timeout={1000}>
+		<Fade in timeout={3000}>
 			<div
 				// src={`/img/${genRandom()}.jpg`}
 				// alt="background"

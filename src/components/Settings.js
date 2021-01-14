@@ -38,7 +38,7 @@ const Settings = (props) => {
 	console.log('Settings.js Rendering...');
 	const classes = useStyles();
 	const [anchorEl, setAnchorEl] = useState(null);
-	const [checked, setChecked] = useState(props.is24 ? true : false);
+	const [checked, setChecked] = useState(props.is24);
 	const [open, setOpen] = useState(false);
 	const [changedName, setChangedName] = useState(props.name);
 
@@ -54,7 +54,6 @@ const Settings = (props) => {
 	};
 	const handleName = (e) => {
 		e.preventDefault();
-		console.log('ff');
 		props.setName(changedName);
 		setOpen(false);
 		handleClose();
